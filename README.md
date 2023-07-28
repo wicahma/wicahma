@@ -19,8 +19,7 @@
 </p>
 
 - 🔭 I’m currently intern on Sebangku Games (Backend Developer)
-- 🌱 I’m currently learning Dart & React Native
-- 👯 I’m looking to collaborate on React Native
+- 🌱 I’m currently learning Dart & Kotlin
 - 💬 Ask me about Javascriptt
 - 📫 How to reach me: mail me at teguh.dc.kusuma@gmail.com
 - 😄 Pronouns: He/Him
