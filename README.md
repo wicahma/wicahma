@@ -1,7 +1,7 @@
 
 <h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hi there, Nice to see you.</h1>
 
-<img align="right" width="30%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wicahma&langs_count=10&title_color=f97316&text_color=ffffff&icon_color=f97316&bg_color=171717&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" />
+<img align="right" width="35%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wicahma&langs_count=10&title_color=f97316&text_color=ffffff&icon_color=f97316&bg_color=171717&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" />
  
 <p>Welcome to my page! </br> I'm Teguh Dwi Cahya Kusuma, a self funded dreamer. </p>
 <h3>actually, I'm a Software Developer</h3>
@@ -18,8 +18,6 @@
 
 ---
 
-<br/>
-<br/>
 <br/>
 <br/>
 <br/>
