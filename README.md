@@ -24,13 +24,13 @@
 <br/>
 <br/>
 
-### Stats
+<h2 align="center" width="100%">Stats</h2>
 
 <p align="center" width="100%">
  
-<img width="43%" src="https://github-readme-stats.vercel.app/api?username=wicahma&show_icons=true&hide=&count_private=true&title_color=f97316&text_color=ffffff&icon_color=f97316&bg_color=171717&hide_border=true&show_icons=true" alt="wicahma's GitHub stats" />
+<img width="47%" src="https://github-readme-stats.vercel.app/api?username=wicahma&show_icons=true&hide=&count_private=true&title_color=f97316&text_color=ffffff&icon_color=f97316&bg_color=171717&hide_border=true&show_icons=true" alt="wicahma's GitHub stats" />
 
-<img width="47%" src="https://github-readme-streak-stats.herokuapp.com/?user=wicahma&stroke=ffffff&background=171717&ring=f97316&fire=f97316&currStreakNum=ffffff&currStreakLabel=f97316&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" />
+<img width="52%" src="https://github-readme-streak-stats.herokuapp.com/?user=wicahma&stroke=ffffff&background=171717&ring=f97316&fire=f97316&currStreakNum=ffffff&currStreakLabel=f97316&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" />
 
 </p>
 
