@@ -16,12 +16,14 @@
 
 <b>My GitHub Stats</b>
 
-<p align="center">
+<p align="center" width="100%>
  
-<a href="http://www.github.com/wicahma"><img src="https://github-readme-stats.vercel.app/api?username=wicahma&show_icons=true&hide=&count_private=true&title_color=f97316&text_color=ffffff&icon_color=f97316&bg_color=171717&hide_border=true&show_icons=true" alt="wicahma's GitHub stats" /></a>
+<img width="30%" src="https://github-readme-stats.vercel.app/api?username=wicahma&show_icons=true&hide=&count_private=true&title_color=f97316&text_color=ffffff&icon_color=f97316&bg_color=171717&hide_border=true&show_icons=true" alt="wicahma's GitHub stats" />
 
-<a href="http://www.github.com/wicahma"><img src="https://github-readme-streak-stats.herokuapp.com/?user=wicahma&stroke=ffffff&background=171717&ring=f97316&fire=f97316&currStreakNum=ffffff&currStreakLabel=f97316&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
+<img width="70%" src="https://github-readme-streak-stats.herokuapp.com/?user=wicahma&stroke=ffffff&background=171717&ring=f97316&fire=f97316&currStreakNum=ffffff&currStreakLabel=f97316&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" />
+
+</p>
+
 
 <a href="https://github.com/wicahma" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=wicahma&langs_count=10&title_color=f97316&text_color=ffffff&icon_color=f97316&bg_color=171717&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
 
-</p>
