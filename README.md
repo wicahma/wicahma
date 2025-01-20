@@ -6,7 +6,7 @@
 <p>Welcome to my page! </br> I'm Teguh Dwi Cahya Kusuma, a self funded dreamer. </p>
 <h3>actually, I'm a Software Developer</h3>
 
-🌍  Based in DI Yogyakarta, Indonesia <img src="https://cdn-icons-png.flaticon.com/512/323/323372.png" width="13"/>,  ✉️  You can contact me at [teguh.dc.kusuma@gmail.com](mailto:teguh.dc.kusuma@gmail.com).  🧠  I'm learning Kotlin, Dart, Golang & Ruby,  🤝  I'm open to collaborating on PWA, also I'm a birb 🐦
+🌍  Based in DI Yogyakarta, Indonesia <img src="https://cdn-icons-png.flaticon.com/512/323/323372.png" width="13"/>,  ✉️  You can contact me at [teguh.dc.kusuma@gmail.com](mailto:teguh.dc.kusuma@gmail.com).  🧠 Until now i stil learning about how to write a clean code,  🤝  I'm open to collaborating on Developing Application / other System 🐦
 
 ---
 
