@@ -60,16 +60,6 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
 
-      - name: Lines of code changed
-        if: env.METRICS_TOKEN != ''
-        uses: lowlighter/metrics@v3.34
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          filename: assets/metrics.lines.svg
-          output_action: none
-          base: ""
-          plugin_lines: yes
-
       - name: Collect rendered cards into the workspace
         run: |
           if [ -d /metrics_renders/assets ]; then
