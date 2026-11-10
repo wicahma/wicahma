@@ -1,8 +1,8 @@
-name: Metrics
+name: Profile refresh
 
 on:
   schedule:
-    - cron: "17 0 * * *"
+    - cron: "17 */6 * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -11,23 +11,51 @@ on:
       - "profile-3d-contrib/**"
       - "README.md"
 
-
 permissions:
   contents: write
 
 concurrency:
-  group: profile-render
+  group: profile-refresh
   cancel-in-progress: false
 
 jobs:
   render:
+    name: Render cards
     runs-on: ubuntu-latest
     env:
       METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
     steps:
       - uses: actions/checkout@v5
 
-      - name: Habits — when the work actually happens
+      - name: Terminal stats card
+        uses: yogeshwaran01/github-stats-terminal-style@master
+        with:
+          username: ${{ github.repository_owner }}
+          theme: gruvbox
+          headerStyle: mac
+          commands: whoami,neofetch,languages,uptime,exit
+          outputPath: assets/github_stats.svg
+
+      - name: 3D contribution skyline
+        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Crypto — 30 days
+        uses: lowlighter/metrics@v3.34
+        with:
+          token: NOT_NEEDED
+          filename: assets/metrics.crypto.svg
+          output_action: none
+          base: ""
+          plugin_crypto: yes
+          plugin_crypto_id: bitcoin
+          plugin_crypto_vs_currency: usd
+          plugin_crypto_days: 30
+          plugin_crypto_precision: 0
+
+      - name: Habits — when the work happens
         if: env.METRICS_TOKEN != ''
         uses: lowlighter/metrics@v3.34
         with:
@@ -73,27 +101,45 @@ jobs:
           plugin_activity_timestamps: yes
           plugin_activity_filter: push, issue, pr, review, release, fork
 
-      - name: Fun — Bitcoin, 30 days
-        uses: lowlighter/metrics@v3.34
+      - uses: actions/upload-artifact@v4
         with:
-          token: NOT_NEEDED
-          filename: assets/metrics.crypto.svg
-          output_action: none
-          base: ""
-          plugin_crypto: yes
-          plugin_crypto_id: bitcoin
-          plugin_crypto_vs_currency: usd
-          plugin_crypto_days: 30
-          plugin_crypto_precision: 0
+          name: cards
+          path: |
+            assets
+            profile-3d-contrib
+          if-no-files-found: error
 
-      - name: Commit rendered cards
+  commit:
+    name: Commit cards
+    needs: render
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: cards
+          path: .
+
+      - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/metrics.*.svg
+          git add assets profile-3d-contrib/profile-night-view.svg
           if git diff --staged --quiet; then
-            echo "no changes"
+            echo "cards unchanged"
           else
-            git commit -m "chore(metrics): refresh generated cards"
+            git commit -m "chore(profile): refresh generated cards"
             git push
           fi
+
+  activity:
+    name: Refresh activity feed
+    needs: commit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: jamesgeorge007/github-activity-readme@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_LINES: 8
